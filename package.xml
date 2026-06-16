@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="3">
-    <name>hex_ros_urdf_template</name>
+    <name>hex_ros_urdf_archer_y6</name>
     <version>0.1.0</version>
-    <description>The hex_ros_urdf_template package</description>
+    <description>The hex_ros_urdf_archer_y6 package</description>
     <maintainer email="dzr159@gmail.com">Dong Zhaorui</maintainer>
     <license>Apache 2.0</license>
 

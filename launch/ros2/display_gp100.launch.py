@@ -9,11 +9,11 @@ from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-    urdf_pkg_path = FindPackageShare("hex_ros_urdf_template")
+    urdf_pkg_path = FindPackageShare("hex_ros_urdf_archer_y6")
     rviz_config_path = PathJoinSubstitution(
         [urdf_pkg_path, "config", "ros2", "display.rviz"])
     urdf_file_path = PathJoinSubstitution(
-        [urdf_pkg_path, "urdf", "model.urdf"])
+        [urdf_pkg_path, "urdf", "gp100.urdf"])
 
     visual_arg = DeclareLaunchArgument(name='visual',
                                        default_value='true',

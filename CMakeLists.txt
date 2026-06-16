@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(hex_ros_urdf_template)
+project(hex_ros_urdf_archer_y6)
 
 set(X_ROS_VERSION $ENV{ROS_VERSION})
 message(STATUS "Your ROS version is ROS${X_ROS_VERSION}")

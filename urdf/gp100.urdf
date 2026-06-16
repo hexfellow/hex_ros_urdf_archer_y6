@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="archer_y6_gp100">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.00102300 0.00000247 0.03072811" rpy="0 0 0" />
+            <mass value="0.74808813" />
+            <inertia ixx="0.00067487" ixy="0.00000015" ixz="0.00001570" iyy="0.00072138" iyz="0.00000002" izz="0.00085851" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.64706 0.64706 0.64706 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="link_1">
+        <inertial>
+            <origin xyz="0.00699383 -0.00349145 0.02258835" rpy="0 0 0" />
+            <mass value="0.24534004" />
+            <inertia ixx="0.00041841" ixy="0.00000916" ixz="-0.00003996" iyy="0.00020839" iyz="0.00001939" izz="0.00039758" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_1" type="revolute">
+        <origin xyz="0 0 0.06645" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="link_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.79" upper="2.79" effort="6" velocity="6" />
+    </joint>
+
+    <link name="link_2">
+        <inertial>
+            <origin xyz="0.00010132 -0.00106108 0.13135856" rpy="0 0 0" />
+            <mass value="1.50114648" />
+            <inertia ixx="0.02099825" ixy="-0.00000109" ixz="0.00002691" iyy="0.02058533" iyz="0.00001151" izz="0.00109630" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_2" type="revolute">
+        <origin xyz="0.02 0 0.045" rpy="0 0 0" />
+        <parent link="link_1" />
+        <child link="link_2" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="2.09" effort="6" velocity="6" />
+    </joint>
+
+    <link name="link_3">
+        <inertial>
+            <origin xyz="-0.0537698 -0.00154368 0.16022395" rpy="0 0 0" />
+            <mass value="1.20436025" />
+            <inertia ixx="0.0109925" ixy="0.00002895" ixz="0.00116056" iyy="0.01062105" iyz="0.0000207" izz="0.00160822" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_3" type="revolute">
+        <origin xyz="0 0 0.264" rpy="0 0 0" />
+        <parent link="link_2" />
+        <child link="link_3" />
+        <axis xyz="0 1 0" />
+        <limit lower="0" upper="3.14" effort="6" velocity="6" />
+    </joint>
+
+    <link name="link_4">
+        <inertial>
+            <origin xyz="-0.05755135 -0.00169321 0.05608527" rpy="0 0 0" />
+            <mass value="0.64362417" />
+            <inertia ixx="0.00107705" ixy="0.00005233" ixz="0.00044728" iyy="0.00125938" iyz="-0.00005024" izz="0.00111793" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_4" type="revolute">
+        <origin xyz="-0.06 0 0.245" rpy="0 0 0" />
+        <parent link="link_3" />
+        <child link="link_4" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="3" velocity="3" />
+    </joint>
+
+    <link name="link_5">
+        <inertial>
+            <origin xyz="0.05285354 0.00000275 0.00262604" rpy="0 0 0" />
+            <mass value="0.40354464" />
+            <inertia ixx="0.00018496" ixy="-0.00000003" ixz="0.0000026" iyy="0.00023176" iyz="0.00000002" izz="0.00022147" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/link_5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_5" type="revolute">
+        <origin xyz="-0.0553 0 0.0702" rpy="0 0 0" />
+        <parent link="link_4" />
+        <child link="link_5" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-1.55" upper="1.55" effort="3" velocity="3" />
+    </joint>
+
+    <link name="gp100_base_link">
+        <inertial>
+            <origin xyz="-0.00523531608459768 2.77004800695868E-06 0.0460185810148192" rpy="0 0 0" />
+            <mass value="0.21156702451304" />
+            <inertia ixx="0.000159113677451031" ixy="-6.05620856092685E-10" ixz="-1.68639928691149E-05" iyy="0.000150498228006475" iyz="2.73255010885696E-09" izz="0.00010826174156365" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint_6" type="revolute">
+        <origin xyz="0.0552 0 0.02895" rpy="0 0 0" />
+        <parent link="link_5" />
+        <child link="gp100_base_link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.96" upper="2.96" effort="3" velocity="3" />
+    </joint>
+
+    <link name="gp100_link_1">
+        <inertial>
+            <origin xyz="-0.00079620591654471 -0.0316186372552212 0.0407248819361245" rpy="0 0 0" />
+            <mass value="0.0554322117046305" />
+            <inertia ixx="3.21990110540877E-05" ixy="-5.08428892555917E-07" ixz="6.43991892408662E-07" iyy="2.82533041735578E-05" iyz="-1.02771095459492E-05" izz="7.59250318779468E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="gp100_joint_1" type="revolute">
+        <origin xyz="0 -0.015 0.076799" rpy="0 0 0" />
+        <parent link="gp100_base_link" />
+        <child link="gp100_link_1" />
+        <axis xyz="-1 0 0" />
+        <limit lower="0" upper="0.7" effort="0" velocity="0" />
+    </joint>
+
+    <link name="gp100_link_2">
+        <inertial>
+            <origin xyz="0.000544668725291003 0.0316186372167186 0.0407248818619177" rpy="0 0 0" />
+            <mass value="0.0554322115508225" />
+            <inertia ixx="3.21990108543782E-05" ixy="-2.3295980960046E-07" ixz="-2.94561015686757E-07" iyy="2.8253303972049E-05" iyz="1.02771095049836E-05" izz="7.59250318740106E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="gp100_joint_2" type="revolute">
+        <origin xyz="0 0.015 0.076799" rpy="0 0 0" />
+        <parent link="gp100_base_link" />
+        <child link="gp100_link_2" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="0.7" effort="0" velocity="0" />
+    </joint>
+
+</robot>
