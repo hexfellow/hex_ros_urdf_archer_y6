@@ -13,7 +13,7 @@ def generate_launch_description():
     rviz_config_path = PathJoinSubstitution(
         [urdf_pkg_path, "config", "ros2", "display.rviz"])
     urdf_file_path = PathJoinSubstitution(
-        [urdf_pkg_path, "urdf", "gp100.urdf"])
+        [urdf_pkg_path, "urdf", "gp100_full.urdf"])
 
     visual_arg = DeclareLaunchArgument(name='visual',
                                        default_value='true',
@@ -25,7 +25,8 @@ def generate_launch_description():
     robot_state_node = Node(package='robot_state_publisher',
                             executable='robot_state_publisher',
                             parameters=[{
-                                'robot_description': description_content,
+                                'robot_description':
+                                description_content,
                             }])
 
     joint_state_node = Node(package='joint_state_publisher_gui',

@@ -178,9 +178,9 @@
 
     <link name="gp100_base_link">
         <inertial>
-            <origin xyz="-0.00523531608459768 2.77004800695868E-06 0.0460185810148192" rpy="0 0 0" />
-            <mass value="0.21156702451304" />
-            <inertia ixx="0.000159113677451031" ixy="-6.05620856092685E-10" ixz="-1.68639928691149E-05" iyy="0.000150498228006475" iyz="2.73255010885696E-09" izz="0.00010826174156365" />
+            <origin xyz="-0.00409595 -0.00011800 0.04195900" rpy="0 0 0" />
+            <mass value="0.49249680" />
+            <inertia ixx="0.00033153" ixy="-0.00000207" ixz="0.00004467" iyy="0.00034440" iyz="0.00000145" izz="0.00023159" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -208,9 +208,9 @@
 
     <link name="gp100_link_1">
         <inertial>
-            <origin xyz="-0.00079620591654471 -0.0316186372552212 0.0407248819361245" rpy="0 0 0" />
-            <mass value="0.0554322117046305" />
-            <inertia ixx="3.21990110540877E-05" ixy="-5.08428892555917E-07" ixz="6.43991892408662E-07" iyy="2.82533041735578E-05" iyz="-1.02771095459492E-05" izz="7.59250318779468E-06" />
+            <origin xyz="-0.00107457 -0.00216870 0.04168942" rpy="0 0 0" />
+            <mass value="0.02628607" />
+            <inertia ixx="0.00002290" ixy="0.00000008" ixz="-0.00000156" iyy="0.00002274" iyz="-0.00000136" izz="0.00000188" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -218,7 +218,7 @@
                 <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_1.STL" />
             </geometry>
             <material name="">
-                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+                <color rgba="1 1 1 1" />
             </material>
         </visual>
         <collision>
@@ -228,19 +228,17 @@
             </geometry>
         </collision>
     </link>
-    <joint name="gp100_joint_1" type="revolute">
-        <origin xyz="0 -0.015 0.076799" rpy="0 0 0" />
+    <joint name="gp100_joint_1" type="fixed">
+        <origin xyz="0 -0.014 0.076799" rpy="0 0 0" />
         <parent link="gp100_base_link" />
         <child link="gp100_link_1" />
-        <axis xyz="-1 0 0" />
-        <limit lower="0" upper="0.7" effort="0" velocity="0" />
     </joint>
 
     <link name="gp100_link_2">
         <inertial>
-            <origin xyz="0.000544668725291003 0.0316186372167186 0.0407248818619177" rpy="0 0 0" />
-            <mass value="0.0554322115508225" />
-            <inertia ixx="3.21990108543782E-05" ixy="-2.3295980960046E-07" ixz="-2.94561015686757E-07" iyy="2.8253303972049E-05" iyz="1.02771095049836E-05" izz="7.59250318740106E-06" />
+            <origin xyz="-0.00107457 0.00216870 0.04168942" rpy="0 0 0" />
+            <mass value="0.02628607" />
+            <inertia ixx="0.00002290" ixy="-0.00000008" ixz="-0.00000156" iyy="0.00002274" iyz="0.00000136" izz="0.00000188" />
         </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -258,12 +256,10 @@
             </geometry>
         </collision>
     </link>
-    <joint name="gp100_joint_2" type="revolute">
-        <origin xyz="0 0.015 0.076799" rpy="0 0 0" />
+    <joint name="gp100_joint_2" type="fixed">
+        <origin xyz="0 0.014 0.076799" rpy="0 0 0" />
         <parent link="gp100_base_link" />
         <child link="gp100_link_2" />
-        <axis xyz="1 0 0" />
-        <limit lower="0" upper="0.7" effort="0" velocity="0" />
     </joint>
 
 </robot>
