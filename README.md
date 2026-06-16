@@ -6,48 +6,36 @@ A dual ROS1/ROS2 URDF template package with a 7-DOF serial manipulator robot mod
 
 ```
 hex_ros_urdf_template/
-├── CMakeLists.txt           # Auto-detect ROS version, install assets
-├── package.xml              # Dual ROS1/ROS2 dependencies
+├── CMakeLists.txt            # Auto-detect ROS version, install assets
+├── package.xml               # Dual ROS1/ROS2 dependencies
 ├── config/
-│   ├── ros1/display.rviz    # RViz1 configuration
-│   └── ros2/display.rviz    # RViz2 configuration
+│   ├── ros1/display.rviz     # RViz1 configuration
+│   └── ros2/display.rviz     # RViz2 configuration
 ├── launch/
 │   ├── ros1/
-│   │   ├── display.launch   # Visualize robot in RViz
-│   │   └── simulate.launch  # Simulate in Gazebo + RViz
+│   │   └── display.launch    # Visualize robot in RViz
 │   └── ros2/
-│       ├── display.launch.py
-│       └── simulate.launch.py
-├── meshes/                  # Placeholder for mesh assets
+│       └── display.launch.py # Visualize robot in RViz2
+├── meshes/                   # Placeholder for mesh assets
 ├── urdf/
-│   ├── model.urdf           # 7-DOF arm URDF description
-│   └── sim_base.xacro       # Xacro for Gazebo simulation
+│   └── model.urdf            # 7-DOF arm URDF description
 └── README.md
 ```
 
 ## Usage
 
-### ROS1 (build with catkin_make or catkin build)
+### ROS1
 
 ```bash
 # Display in RViz
 roslaunch hex_ros_urdf_template display.launch
-
-# Simulate in Gazebo
-roslaunch hex_ros_urdf_template simulate.launch
 ```
 
-### ROS2 (build with colcon)
+### ROS2
 
 ```bash
 # Display in RViz2
 ros2 launch hex_ros_urdf_template display.launch.py
-
-# Simulate in Gazebo
-ros2 launch hex_ros_urdf_template simulate.launch.py
-
-# Turn off visualization
-ros2 launch hex_ros_urdf_template display.launch.py visual:=false
 ```
 
 ## Robot Model
