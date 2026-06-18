@@ -13,7 +13,7 @@ def generate_launch_description():
     rviz_config_path = PathJoinSubstitution(
         [urdf_pkg_path, "config", "ros2", "display.rviz"])
     urdf_file_path = PathJoinSubstitution(
-        [urdf_pkg_path, "urdf", "gp100_full.urdf"])
+        [urdf_pkg_path, "urdf", "gr100_full.urdf"])
 
     visual_arg = DeclareLaunchArgument(name='visual',
                                        default_value='true',

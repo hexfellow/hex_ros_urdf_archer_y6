@@ -2,7 +2,7 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot name="archer_y6_gp100">
+<robot name="archer_y6_gr100">
     <link name="base_link">
         <inertial>
             <origin xyz="-0.00102300 0.00000247 0.03072811" rpy="0 0 0" />
@@ -176,7 +176,7 @@
         <limit lower="-1.55" upper="1.55" effort="3" velocity="3" />
     </joint>
 
-    <link name="gp100_base_link">
+    <link name="grip_base_link">
         <inertial>
             <origin xyz="-0.00409595 -0.00011800 0.04195900" rpy="0 0 0" />
             <mass value="0.49249680" />
@@ -185,7 +185,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_base_link.STL" />
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gr100_base_link.STL" />
             </geometry>
             <material name="">
                 <color rgba="1 1 1 1" />
@@ -194,19 +194,19 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_base_link.STL" />
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gr100_base_link.STL" />
             </geometry>
         </collision>
     </link>
     <joint name="joint_6" type="revolute">
         <origin xyz="0.0552 0 0.02895" rpy="0 0 0" />
         <parent link="link_5" />
-        <child link="gp100_base_link" />
+        <child link="grip_base_link" />
         <axis xyz="0 0 1" />
         <limit lower="-2.96" upper="2.96" effort="3" velocity="3" />
     </joint>
 
-    <link name="gp100_link_1">
+    <link name="grip_link_1">
         <inertial>
             <origin xyz="-0.00119579 -0.02519891 0.03196361" rpy="0 0 0" />
             <mass value="0.02438432" />
@@ -215,7 +215,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_1.STL" />
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gr100_link_1.STL" />
             </geometry>
             <material name="">
                 <color rgba="1 1 1 1" />
@@ -224,19 +224,19 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_1.STL" />
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gr100_link_1.STL" />
             </geometry>
         </collision>
     </link>
-    <joint name="gp100_joint_1" type="revolute">
+    <joint name="gr100_joint_1" type="revolute">
         <origin xyz="0 -0.014 0.076799" rpy="0 0 0" />
-        <parent link="gp100_base_link" />
-        <child link="gp100_link_1" />
+        <parent link="grip_base_link" />
+        <child link="grip_link_1" />
         <axis xyz="-1 0 0" />
         <limit lower="0" upper="0.6" effort="0" velocity="0" />
     </joint>
 
-    <link name="gp100_link_2">
+    <link name="grip_link_2">
         <inertial>
             <origin xyz="-0.00119579 0.02519891 0.03196361" rpy="0 0 0" />
             <mass value="0.02438432" />
@@ -245,7 +245,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_2.STL" />
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gr100_link_2.STL" />
             </geometry>
             <material name="">
                 <color rgba="1 1 1 1" />
@@ -254,16 +254,16 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gp100_link_2.STL" />
+                <mesh filename="package://hex_ros_urdf_archer_y6/meshes/gr100_link_2.STL" />
             </geometry>
         </collision>
     </link>
-    <joint name="gp100_joint_2" type="revolute">
+    <joint name="gr100_joint_2" type="revolute">
         <origin xyz="0 0.014 0.076799" rpy="0 0 0" />
-        <parent link="gp100_base_link" />
-        <child link="gp100_link_2" />
+        <parent link="grip_base_link" />
+        <child link="grip_link_2" />
         <axis xyz="1 0 0" />
-        <mimic joint="gp100_joint_1" multiplier="1" offset="0" />
+        <mimic joint="gr100_joint_1" multiplier="1" offset="0" />
         <limit lower="0" upper="0.6" effort="0" velocity="0" />
     </joint>
 
