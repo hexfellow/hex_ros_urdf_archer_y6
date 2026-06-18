@@ -176,7 +176,7 @@
         <limit lower="-1.55" upper="1.55" effort="3" velocity="3" />
     </joint>
 
-    <link name="grip_base_link">
+    <link name="link_6">
         <inertial>
             <origin xyz="-0.00409595 -0.00011800 0.04195900" rpy="0 0 0" />
             <mass value="0.49249680" />
@@ -201,7 +201,7 @@
     <joint name="joint_6" type="revolute">
         <origin xyz="0.0552 0 0.02895" rpy="0 0 0" />
         <parent link="link_5" />
-        <child link="grip_base_link" />
+        <child link="link_6" />
         <axis xyz="0 0 1" />
         <limit lower="-2.96" upper="2.96" effort="3" velocity="3" />
     </joint>
@@ -228,9 +228,9 @@
             </geometry>
         </collision>
     </link>
-    <joint name="gr100_joint_1" type="fixed">
+    <joint name="grip_joint_1" type="fixed">
         <origin xyz="0 -0.014 0.076799" rpy="0 0 0" />
-        <parent link="grip_base_link" />
+        <parent link="link_6" />
         <child link="grip_link_1" />
     </joint>
 
@@ -256,9 +256,9 @@
             </geometry>
         </collision>
     </link>
-    <joint name="gr100_joint_2" type="fixed">
+    <joint name="grip_joint_2" type="fixed">
         <origin xyz="0 0.014 0.076799" rpy="0 0 0" />
-        <parent link="grip_base_link" />
+        <parent link="link_6" />
         <child link="grip_link_2" />
     </joint>
 
